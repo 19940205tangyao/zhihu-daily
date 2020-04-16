@@ -1,0 +1,38 @@
+$fle: flex
+$direction: column
+.welcome
+  position: absolute;
+  height: 100%;
+  z-index: 999;
+  display: $fle;
+  flex-direction: $direction;
+  color: #fff;
+  .img-wrap
+    position: relative;
+  .text-wrap
+    flex: 1;
+    display: $fle;
+    justify-content: center;
+    align-items: center;
+    background: #17181a;
+    .text
+      display: $fle;
+      flex-direction: $direction;
+      .title
+        margin-bottom: 8px;
+        font-size: 20px;
+      .bio
+        color: #75757b;
+.hide
+  display: none;
+.welcome::before
+  display: block;
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: .25;
+  z-index: 10;
